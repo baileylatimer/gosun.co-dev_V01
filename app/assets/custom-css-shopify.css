@@ -1,0 +1,154 @@
+/* Main Menu */
+
+.mega-menu__image-caption-link img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.dropdown_column {
+  padding: 10px 20px 0px 20px;
+}
+
+.dropdown_column:hover {
+  background: #f7f7f7;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.17) !important;
+}
+
+.dropdown_column img {
+  filter: saturate(1);
+}
+
+.dropdown_column:hover img {
+  filter: saturate(0) brightness(0.97);
+}
+
+.menu .vertical-menu_submenu,
+.dropdown_content,
+div.dropdown.menu {
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.17) !important;
+}
+
+.vertical-menu_submenu li:hover {
+  background: #f7f7f7;
+  border-radius: 4px;
+}
+
+.menu li a[href]:hover,
+.menu li a:focus,
+.menu a[href]:hover span {
+  color: #1b1b1b;
+}
+
+.menu a.top_link:hover,
+.menu a.dropdown_link:hover,
+.menu a.active_link {
+  border-bottom: none;
+}
+
+.vertical-menu a,
+.vertical-menu a:visited,
+.dropdown_content p,
+.mobile-mega-menu p {
+  color: #5f6368;
+}
+
+.vertical-menu a:hover,
+.vertical-menu a:active,
+.vertical-menu a:focus,
+.dropdown_content p,
+.mobile-mega-menu p {
+  color: #1b1b1b;
+}
+
+.vertical-menu .icon-down-arrow {
+  display: none;
+}
+
+.dropdown {
+  overflow-x: hidden;
+  position: absolute;
+  left: 0;
+}
+
+.promo_banner {
+  background-color: #03a9f4;
+}
+
+.promo_banner a {
+  color: #ffffff;
+}
+
+div.logo {
+  width: auto;
+  margin-right: 40px;
+}
+
+.main_nav_wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.nav {
+  width: auto !important;
+}
+
+.menu .vertical-menu li {
+  padding-right: 40px;
+}
+
+#header .top_bar {
+  z-index: 99;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-size: 24px;
+}
+
+.mini_cart,
+.nav a.mini_cart {
+  background: transparent;
+}
+
+@media only screen and (min-width: 768px) {
+  .cart_container {
+    margin-top: -50px;
+    margin-right: -80px;
+  }
+}
+
+a.icon-bag.mini_cart.dropdown_link,
+a.mini_cart span {
+  color: #5f6368;
+}
+
+.cart_container:hover > a.icon-bag.mini_cart.dropdown_link,
+span.cart_count {
+  color: #1b1b1b;
+}
+
+.main_nav_wrapper {
+  z-index: 999999;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05),
+    0 1px 3px 0 rgba(63, 63, 68, 0.15);
+}
+
+#header .top_bar {
+  z-index: 999999;
+  width: 100%;
+}
+
+.logo:hover {
+  filter: saturate(0);
+  opacity: 0.5;
+  transition: all 0.1s ease-out;
+}
+
+.nav ul.menu {
+  padding-top: 6px !important;
+}

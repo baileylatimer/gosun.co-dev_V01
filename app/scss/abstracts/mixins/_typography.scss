@@ -1,0 +1,117 @@
+// -----------------------------------------------------------------------------
+// Fonts
+// -----------------------------------------------------------------------------
+
+@mixin fontsize($size: 24, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+// prettier-ignore
+@mixin font($color: false, $weight: false,  $lh: false) {
+    @if $color { color: $color; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+  }
+
+// prettier-ignore
+@mixin font($color: false, $weight: false,  $lh: false) {
+  @if $color {
+    color: $color;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((80vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+@mixin fell {
+  font-family: "nimbus-sans", Georgia, Cambria, "Times New Roman", Times, serif;
+}
+@mixin serif {
+  font-family: "minion-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+@mixin serif-bold {
+  font-family: "minion-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+@mixin serif-italic {
+  font-family: "minion-pro", Georgia, Cambria, "Times New Roman", Times, serif !important;
+  font-style: italic;
+}
+
+@mixin serif-condensed {
+  font-family: "minion-pro-condensed", Georgia, Cambria, "Times New Roman",
+    Times, serif;
+}
+
+@mixin serif-display {
+  font-family: "minion-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  /*
+  font-family: cooper-black-std, serif;
+  font-weight: 400;
+  font-style: normal;
+  */
+}
+
+@mixin sans {
+  font-family: "nimbus-sans", if-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+@mixin sans-light {
+  font-family: "nimbus-sans", if-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 300;
+}
+@mixin sans-bold {
+  font-family: "nimbus-sans", if-font, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 700;
+}
+
+@mixin sans-extended {
+  font-family: "nimbus-sans-extended", Helvetica, Arial, sans-serif;
+}
+
+@mixin sans-extended-bold {
+  font-family: "nimbus-sans-extended", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+@mixin sub-text() {
+  font-size: 0.8em;
+  color: $sub-text-color;
+}

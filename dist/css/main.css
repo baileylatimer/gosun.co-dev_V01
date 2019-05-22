@@ -1,0 +1,111 @@
+@import "//app/scss/bundle";
+@import "//app/scss/bundle";
+@import "//app/scss/bundle";
+@import "//app/scss/bundle";
+@import "//app/scss/bundle";
+@import "//app/scss/bundle";
+@import "//app/scss/bundle";
+@import "//app/scss/bundle";
+@import "//app/scss/bundle";
+@import "//app/scss/bundle";
+html {
+  font-size: 18px; }
+  @media screen and (min-width: 320px) {
+    html {
+      font-size: calc( 18px + 3 * ((80vw - 320px) / 880)); } }
+  @media screen and (min-width: 1200px) {
+    html {
+      font-size: 21px; } }
+
+body {
+  line-height: 1.5rem; }
+
+p,
+li {
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.008em; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 1.5rem; }
+
+h2,
+h3,
+h5 {
+  letter-spacing: -0.015em; }
+
+h1 {
+  letter-spacing: 0em; }
+
+h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-top: calc((1.5rem - 2rem) + 1.5rem); }
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin-top: calc((1.5rem - 1.5rem) + 1.5rem* 2); }
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  margin-top: calc((1.5rem - 1.25rem) + 1.5rem* 2); }
+
+h4 {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-top: calc((1.5rem - 1rem) + 1.5rem* 2); }
+
+h5 {
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  margin-top: calc((1.5rem - 0.875rem) + 1.5rem* 2); }
+
+h1 {
+  font-size: 2.0736rem; }
+  h1 {
+    font-size: 31.104px; }
+    @media screen and (min-width: 320px) {
+      h1 {
+        font-size: calc( 31.104px + 29.646 * ((80vw - 320px) / 880)); } }
+    @media screen and (min-width: 1200px) {
+      h1 {
+        font-size: 60.75px; } }
+
+h2 {
+  font-size: 1.728rem; }
+  h2 {
+    font-size: 25.92px; }
+    @media screen and (min-width: 320px) {
+      h2 {
+        font-size: calc( 25.92px + 14.58 * ((80vw - 320px) / 880)); } }
+    @media screen and (min-width: 1200px) {
+      h2 {
+        font-size: 40.5px; } }
+
+h3 {
+  font-size: 1.44rem; }
+  h3 {
+    font-size: 25.92px; }
+    @media screen and (min-width: 320px) {
+      h3 {
+        font-size: calc( 25.92px + 14.58 * ((80vw - 320px) / 880)); } }
+    @media screen and (min-width: 1200px) {
+      h3 {
+        font-size: 40.5px; } }
+
+body,
+h1,
+h2,
+h3,
+h4 {
+  color: rgba(0, 0, 0, 0.87);
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "pnum";
+  font-variant-numeric: proportional-nums; }

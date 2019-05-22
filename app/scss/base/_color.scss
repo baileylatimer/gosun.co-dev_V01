@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to global colors.
+// -----------------------------------------------------------------------------
+@import "//app/scss/bundle";
+
+// Red Color Variables
+$cardinal: #bc2026;
+$pomegranate: #f44336;
+$bittersweet: #ff6f60;
+$bright-red: #ab000d;
+
+// Blue Color Variables
+$cerulean: #00a9f4;
+$anakiwa: #72e7ff;
+$lochmara: #007ac1;
+
+// Neutral Color Variables
+$black: rgba(0, 0, 0, 1);
+$mine-shaft: rgba(0, 0, 0, 0.87);
+$boulder: rgba(0, 0, 0, 0.54);
+$iron: #dfe1e5;
+$white: rgba(255, 255, 255, 1);
+
+// Color Configs
+$primary-color: $pomegranate;
+$secondary-color: $bittersweet;
+$color-text-light: $white;
+$color-text-dark: $mine-shaft;

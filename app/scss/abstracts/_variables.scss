@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Screen size variables
+$screen-xs-min: 425px; // Tiny phones
+$screen-sm-min: 576px; // Small tablets and large smartphones (landscape view)
+$screen-md-min: 768px; // Small tablets (portrait view)
+$screen-lg-min: 992px; // Tablets and small desktops
+$screen-xl-min: 1200px; // Large tablets and desktops
+
+$baseline: 1.5rem;
+$h1: 2rem;
+$h2: 1.5rem;
+$h3: 1.25rem;
+$h4: 1rem;
+$h5: 0.875rem;
+$font-size-small: 0.9em;
+$font-size-smallest: 14px;
+
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 18px;
+$max_font: 21px;
+
+$mod_1: 1.2; // mobile
+$mod_2: 1.5; // desktop

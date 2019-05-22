@@ -1,0 +1,118 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+@import "//app/scss/bundle";
+
+@mixin no-wrap() {
+  white-space: -moz-nowrap; /* Firefox */
+  white-space: -o-nowrap; /* Opera */
+  white-space: nowrap; /* Chrome */
+}
+
+@mixin size($width: null, $height: null) {
+  width: $width;
+  height: $height;
+}
+@mixin sizeMax($width: null, $height: null) {
+  max-width: $width;
+  max-height: $height;
+}
+@mixin sizeMin($width: null, $height: null) {
+  min-width: $width;
+  min-height: $height;
+}
+@mixin flexBox($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin flexSelf($align) {
+  align-self: $align;
+}
+//Padding mixin
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+//Margin mixin
+@mixin paddingAll($padding) {
+  margin: $padding;
+}
+//Margin mixin
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+//Margin mixin
+@mixin marginAll($margin) {
+  margin: $margin;
+}
+
+@mixin textColor($color) {
+  @if $color == light {
+    color: $color-text-dark;
+  } @else if $color == dark {
+    color: $color-text-dark;
+  }
+}
+@mixin animate($duration) {
+  @if $duration == fast {
+    transition: all 0.2s ease;
+  } @else if $duration == slow {
+    transition: all 0.5s ease-out;
+  }
+}
+@mixin textStyle($color, $decoration: null) {
+  @include textColor($color);
+  @if $decoration == ul {
+    text-decoration: underline !important;
+  }
+}
+
+@mixin absolute($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// Mixins
+@mixin xs {
+  @media (min-width: #{$screen-xs-min}) {
+    @content;
+  }
+} // Tiny devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+} // Small devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+} // Medium devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+} // Large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+} // Extra large device
+
+@mixin gradient() {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(to bottom, rgba(49, 49, 47, 0.95), #262625);
+}
+@mixin card-shadow() {
+  box-shadow: 0 0.5rem 1rem -0.5rem rgba(0, 0, 0, 0.1);
+}
