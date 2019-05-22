@@ -14,15 +14,21 @@ $cerulean: #00a9f4;
 $anakiwa: #72e7ff;
 $lochmara: #007ac1;
 
-// Neutral Color Variables
+// Dark Color Variables
 $black: rgba(0, 0, 0, 1);
 $mine-shaft: rgba(0, 0, 0, 0.87);
 $boulder: rgba(0, 0, 0, 0.54);
-$iron: #dfe1e5;
+
+// LightColor Variables
 $white: rgba(255, 255, 255, 1);
+$alabaster: #f7f7f7;
+$silver: rgba(0, 0, 0, 0.17);
+$iron: #dfe1e5;
 
 // Color Configs
-$primary-color: $pomegranate;
-$secondary-color: $bittersweet;
+$color-primary: $pomegranate;
+$color-secondary: $bittersweet;
+$color-cool: $cerulean;
 $color-text-light: $white;
 $color-text-dark: $mine-shaft;
+$color-text-accent: $boulder;

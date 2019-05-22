@@ -1,0 +1,8 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to global transitions.
+// -----------------------------------------------------------------------------
+@import "//app/scss/bundle";
+
+@mixin animateFast() {
+  transition: all 0.1s ease-out;
+}

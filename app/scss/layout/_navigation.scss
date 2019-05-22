@@ -2,3 +2,172 @@
 // This file contains all styles related to navigation
 // -----------------------------------------------------------------------------
 @import "//app/scss/bundle";
+
+// -----------------------------------------------------------------------------
+// Navigation Container
+// -----------------------------------------------------------------------------
+
+.main_nav_wrapper {
+  @include flexBox(row, center, null);
+  @include centerMargin();
+  @include size(100%);
+  background: $white;
+  z-index: 999999;
+}
+
+.nav {
+  width: auto !important;
+  ul.menu {
+    padding-top: 6px !important;
+  }
+}
+
+.main_nav_wrapper {
+  z-index: 999999;
+  width: 100%;
+  background: $white;
+  @include nav-shadow();
+}
+
+#header .top_bar {
+  z-index: 99;
+}
+
+// -----------------------------------------------------------------------------
+// Mega-menu
+// -----------------------------------------------------------------------------
+
+.mega-menu__image-caption-link img {
+  @include sizeMax(200px, 200px);
+}
+
+.dropdown_column {
+  @include padding(10px, 20px, 0, 20px);
+  & img {
+    filter: saturate(0);
+  }
+  &:hover {
+    background: $alabaster;
+    @include menu-shadow();
+    .dropdown_content p {
+      color: $color-text-dark !important;
+    }
+    img {
+      filter: saturate(1) brightness(0.97);
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Dropdown menu
+// -----------------------------------------------------------------------------
+
+.menu .vertical-menu_submenu,
+.dropdown_content,
+div.dropdown.menu {
+  background: $white;
+  @include rounded();
+  @include menu-shadow();
+}
+
+.vertical-menu_submenu li:hover {
+  background: $alabaster;
+  @include rounded();
+}
+
+.vertical-menu a:hover,
+.vertical-menu a:active,
+.vertical-menu a:focus,
+.dropdown_content p,
+.mobile-mega-menu p,
+.menu li a[href]:hover,
+.menu li a:focus,
+.menu a[href]:hover span {
+  color: $color-text-dark;
+}
+
+.vertical-menu a,
+.vertical-menu a:visited,
+.dropdown_content p,
+.mobile-mega-menu p {
+  color: $color-text-accent;
+}
+
+.menu a.top_link:hover,
+.menu a.dropdown_link:hover,
+.menu a.active_link {
+  border-bottom: none;
+}
+
+.vertical-menu .icon-down-arrow {
+  display: none;
+}
+
+.dropdown {
+  overflow-x: hidden;
+  position: absolute;
+  left: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Promo Banner
+// -----------------------------------------------------------------------------
+
+.promo_banner {
+  background: $color-cool;
+  a {
+    color: $white;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Logo
+// -----------------------------------------------------------------------------
+
+div.logo {
+  width: auto;
+  margin-right: 40px;
+  &:hover {
+    filter: saturate(0);
+    opacity: 0.5;
+    @include animateFast();
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Shopping Cart
+// -----------------------------------------------------------------------------
+
+.menu .vertical-menu li {
+  padding-right: 40px;
+}
+
+/**
+ * Cart Icon - Shopping Cart
+ */
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-size: 24px;
+}
+
+a.icon-bag.mini_cart.dropdown_link,
+a.mini_cart span {
+  color: $color-text-accent;
+}
+
+.cart_container:hover > a.icon-bag.mini_cart.dropdown_link,
+span.cart_count {
+  color: $color-text-dark;
+}
+
+.mini_cart,
+.nav a.mini_cart {
+  background: transparent;
+}
+
+@include md {
+  .cart_container {
+    @include margin(-50px, -80px, 0, 0);
+  }
+}

@@ -27,8 +27,18 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin centerMargin() {
+  margin: 0 auto;
+}
+
 @mixin flexSelf($align) {
   align-self: $align;
+}
+
+//Padding mixin - ALL
+@mixin paddingAll($padding) {
+  padding: $padding;
 }
 //Padding mixin
 @mixin padding($top, $right, $bottom, $left) {
@@ -37,20 +47,18 @@
   padding-bottom: $bottom;
   padding-left: $left;
 }
-//Margin mixin
-@mixin paddingAll($padding) {
-  margin: $padding;
+
+//Margin mixin - All
+@mixin marginAll($margin) {
+  margin: $margin;
 }
+
 //Margin mixin
 @mixin margin($top, $right, $bottom, $left) {
   margin-top: $top;
   margin-right: $right;
   margin-bottom: $bottom;
   margin-left: $left;
-}
-//Margin mixin
-@mixin marginAll($margin) {
-  margin: $margin;
 }
 
 @mixin textColor($color) {
@@ -115,4 +123,25 @@
 }
 @mixin card-shadow() {
   box-shadow: 0 0.5rem 1rem -0.5rem rgba(0, 0, 0, 0.1);
+}
+
+@mixin box-shadow($top, $right, $bottom, $blur, $color) {
+  -webkit-box-shadow: $top $right $bottom $blur $color !important;
+  -moz-box-shadow: $top $right $bottom $blur $color !important;
+  box-shadow: $top $right $bottom $blur $color !important;
+}
+
+@mixin menu-shadow() {
+  @include box-shadow(0, 2px, 6px, 0, $silver);
+}
+
+@mixin nav-shadow() {
+  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05),
+    0 1px 3px 0 rgba(63, 63, 68, 0.15);
+}
+
+@mixin rounded($radius: 4px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
 }
