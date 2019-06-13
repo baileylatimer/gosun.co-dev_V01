@@ -3,14 +3,16 @@
 // -----------------------------------------------------------------------------
 @import "//app/scss/bundle";
 
+
 // Red Color Variables
 $cardinal: #bc2026;
 $pomegranate: #f44336;
 $bittersweet: #ff6f60;
 $bright-red: #ab000d;
+$indiegogo: #E51075;
 
 // Blue Color Variables
-$cerulean: #00a9f4;
+$cerulean: #03a9f4;
 $anakiwa: #72e7ff;
 $lochmara: #007ac1;
 
@@ -27,6 +29,7 @@ $iron: #dfe1e5;
 
 // Color Configs
 $color-primary: $pomegranate;
+$color-primary-hover: $bittersweet;
 $color-secondary: $bittersweet;
 $color-cool: $cerulean;
 $color-text-light: $white;
