@@ -38,7 +38,7 @@
     "gulp-unused": "^0.2.1",
     "lazysizes": "^4.1.5",
     "postcss-uncss": "^0.16.1",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "swup": "^1.7.19",
     "uncss": "^0.16.2",
     "wow.js": "^1.2.2"
